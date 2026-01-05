@@ -1,0 +1,302 @@
+.contact {
+  background-color: var(--bg-secondary);
+}
+
+/* CTA Banner */
+.ctaBanner {
+  background: linear-gradient(135deg, var(--accent-orange) 0%, var(--accent-coral) 100%);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-6xl) var(--spacing-4xl);
+  text-align: center;
+  margin-bottom: var(--spacing-6xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.ctaEmoji {
+  display: block;
+  font-size: var(--text-4xl);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.ctaText {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  max-width: 500px;
+  margin: 0 auto var(--spacing-lg);
+  position: relative;
+  font-family: var(--font-display);
+}
+
+.ctaSubtext {
+  font-size: var(--text-md);
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-7xl);
+}
+
+.header {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--accent-orange);
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-size: var(--text-4xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4xl);
+}
+
+/* Primary Actions */
+.primaryActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.actionCard {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-2xl) var(--spacing-3xl);
+  background-color: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-primary);
+  transition: all var(--transition-normal);
+}
+
+.actionCard:hover {
+  border-color: var(--accent-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+}
+
+.actionIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-xl);
+  background-color: var(--accent-orange-light);
+  color: var(--accent-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.actionIcon.teal {
+  background-color: var(--accent-teal-light);
+  color: var(--accent-teal);
+}
+
+[data-theme="dark"] .actionIcon.teal {
+  background-color: rgba(13, 148, 136, 0.2);
+  color: #5EEAD4;
+}
+
+.actionContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.actionTitle {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.actionDesc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.actionArrow {
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.actionCard:hover .actionArrow {
+  color: var(--accent-orange);
+  transform: translate(2px, -2px);
+}
+
+/* Social Links */
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.socialLabel {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  color: var(--text-secondary);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: #FFFFFF;
+  background-color: var(--accent-orange);
+  border-color: var(--accent-orange);
+  transform: translateY(-2px);
+}
+
+/* Email Copy */
+.emailSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding-top: var(--spacing-3xl);
+  border-top: 1px solid var(--border-primary);
+  position: relative;
+}
+
+.emailLabel {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.emailButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xl) var(--spacing-2xl);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.emailButton:hover {
+  border-color: var(--border-secondary);
+  background-color: var(--bg-secondary);
+}
+
+.emailText {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.copyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.emailButton:hover .copyIcon {
+  color: var(--accent-orange);
+}
+
+.copiedToast {
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--accent-teal);
+}
+
+[data-theme="dark"] .copiedToast {
+  color: #5EEAD4;
+}
+
+@media (max-width: 968px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4xl);
+  }
+
+  .header {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctaBanner {
+    padding: var(--spacing-4xl) var(--spacing-2xl);
+  }
+
+  .ctaText {
+    font-size: var(--text-2xl);
+  }
+
+  .title {
+    font-size: var(--text-3xl);
+  }
+
+  .actionCard {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+  }
+
+  .actionContent {
+    align-items: center;
+  }
+
+  .actionArrow {
+    display: none;
+  }
+}
